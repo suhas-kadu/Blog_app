@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -16,6 +18,7 @@ class BlogScreen extends StatelessWidget {
               if (snapshot.hasData) {
                 return Markdown(
                   data: snapshot.data,
+                  imageDirectory: Directory("assets/images/logo.png", ),
                 );
               }
 

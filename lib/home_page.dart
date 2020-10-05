@@ -1,10 +1,5 @@
 import 'package:blog_app/views/blog_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:http/http.dart' as http;
-import 'package:english_words/english_words.dart';
 
 const String _content = """
 # blog_app
@@ -36,13 +31,16 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => BlogScreen()));
               },
               child: Container(
-                height: 30,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                children: <Widget>[
-                  Text("Go to first Blog",style: TextStyle(fontSize: 20),),
-                ],
-              )))),
+                  height: 30,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Go to first Blog",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  )))),
     );
   }
 }
