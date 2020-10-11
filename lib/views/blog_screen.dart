@@ -8,9 +8,7 @@ class BlogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Blogs"),
-      ),
+      
       body: Container(
         child: FutureBuilder(
             future: Future.delayed(Duration(seconds: 1), () => rootBundle.loadString("assets/file.md")),
